@@ -4,6 +4,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <script>
+
 	function titleScroller(text) {
     document.title = text;
     setTimeout(function () {
@@ -99,33 +100,8 @@ body {
 
 <div><center>[Hi my name is ν-senz or Nu for short, i mostly edit things i like ala vidya gaems]</center></div>
 <div><center>[this is my little corner of the internet, have fun digging though this rudimentary site]</center></div>
-<audio id="my-audio" src="Happyface.mp3" type="audio/mpeg"></audio>
-
-<div><center><button id="play-button">Play</button>
-<button id="pause-button">Pause</button>
-<button id="vol-up-btn">Volume Up</button>
-<button id="vol-down-btn">Volume Down</button></center></div>
-
-<script>
-var myAudio = document.getElementById('my-audio');
-var playButton = document.getElementById('play-button');
-var pauseButton = document.getElementById('pause-button');
-var volUpButton = document.getElementById('vol-up-btn');
-var volDownButton = document.getElementById('vol-down-btn');
-
-playButton.addEventListener("click", function(){
-    myAudio.play();
-});
-pauseButton.addEventListener("click", function(){
-    myAudio.pause();
-});
-volUpButton.addEventListener("click", function(){
-    myAudio.volume+=0.1;
-});
-volDownButton.addEventListener("click", function(){
-    myAudio.volume-=0.1;
-});
-	</script>
+<audio loop id="my-audio" src="Happyface.mp3" type="audio/mpeg"></audio>
+ 
 <b><center><h2 onclick="AboutMeFunction()" style="color:white" class=glow2 id="play">[About Me]</h2>
 <b><center><h4 style="color:white" id="AboutMe"></h4>
 <img src="nu.png" width="400" height="370" alt=""/>
@@ -161,7 +137,22 @@ resetBtn.addEventListener('mouseleave', function() {
   hover.currentTime = 0;
 }, false);
 </script>
-<div style="color:red" class=glow><center>[youtube]</center></div>
+<div><center><button id="play-button">Play</button>
+	<button id="pause-button">Pause</button></div></center>
+<script>
+var myAudio = document.getElementById('my-audio');
+var playButton = document.getElementById('play-button');
+var pauseButton = document.getElementById('pause-button');
+
+playButton.addEventListener("click", function(){
+    myAudio.play();
+});
+pauseButton.addEventListener("click", function(){
+    myAudio.pause();
+});
+	</script>
+	<div><a href="404.html">discord</a></div>
+<div style="color:red" class=glow><center>[latest youtubes]</center></div>
 <center><iframe width="813" height="457" style="max-width:100%;max-height:auto;" src="https://www.youtube.com/embed/7CD_Yb-Y8Po?list=PLNeDptWJi02ZIttPcu-gM9SARO-biPJxQ" title="highspeedhighflavor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
 <center><img src="Webpage_construction.gif" width="200" height="200"></center>
 <div class="marquee">
