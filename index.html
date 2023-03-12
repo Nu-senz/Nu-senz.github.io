@@ -87,6 +87,37 @@ body {
   background-attachment: fixed;
   background-size: 100% 100%;
 }
+ #screensize {
+        color: white;
+        display: inline-block;
+        margin: auto auto 1rem;
+        text-align: center;
+    }
+    @media (min-width: 1400px) {
+        #screensize::after {
+            content: "Good, you paid alot for your monitor didnt you!";
+            color: rgb(46, 255, 46);
+        }
+    }
+    @media (max-width: 1400px) {
+        #screensize::after {
+            content: "Small, hey heres a tip zoom out to see the rest of the stuff!";
+            color: Orange;
+        }
+    }
+    @media (max-width: 1000px) {
+        #screensize::after {
+            content: "Too small, your probably on a tablet, get on your PC dumbass!";
+            color: red;
+    }
+    @media (max-width: 600px) {
+        body {
+            margin: 0;
+    }
+    #screensize::after {
+		content: "Too small, fucking phoneposters";
+        color: darkred;
+    }
 </style>
 </head>
 <body>
@@ -96,7 +127,7 @@ body {
 </div>
 </div>
 <center><img src="Comp_1.gif" width="320" height="180" /></center>
-<div><center><span id="screensize">Your display size is: </span></center></div>
+<div><center><span id="screensize">[Your display size is: </span>]</center></div>
 
 <div><center>[Hi my name is ν-senz or Nu for short, i mostly edit things i like ala vidya gaems]</center></div>
 <div><center>[this is my little corner of the internet, have fun digging though this rudimentary site]</center></div>
