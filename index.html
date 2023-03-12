@@ -15,6 +15,24 @@ function play() {
 }
 </script>
 <style>
+.glow2 {
+        font-size: 25px;
+        color: #db7093;
+        text-align: center;
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 
+                       0 0 25px #db7093, 0 0 30px #db7093, 0 0 35px #db7093;
+        }
+        to {
+          text-shadow: 0 0 10px #ffffff, 0 0 15px #db7093, 0 0 10px #db7093, 0 0 25px #db7093,
+                       0 0 15px #db7093, 0 0 70px #db7093, 0 0 40px #db7093;
+        }
+      }
 .glow {
         font-size: 50px;
         color: #db7093;
@@ -108,13 +126,40 @@ volDownButton.addEventListener("click", function(){
     myAudio.volume-=0.1;
 });
 	</script>
-<b><center><h2 onclick="AboutMeFunction()" style="color:white" id="play">About Me</h2>
+<b><center><h2 onclick="AboutMeFunction()" style="color:white" class=glow2 id="play">[About Me]</h2>
 <b><center><h4 style="color:white" id="AboutMe"></h4>
 <img src="nu.png" width="400" height="370" alt=""/>
 <script>
 function AboutMeFunction() { 
 	document.getElementById("AboutMe").innerHTML = "[Born and raised in Colombia; Nu-senz is an overdiagnosed and overmedicated individual who does silly edits on the interwebs]";
 }
+</script>
+<audio id="hover" src="select.mp3" preload="auto"></audio>
+<script>
+var playBtn = document.getElementById('play'),
+  resetBtn = document.getElementById('reset'),
+  hearbeat = document.getElementById('hover')
+  audios = document.querySelectorAll('audio');
+console.log(audios);
+playBtn.addEventListener('mouseover', function() {
+[].forEach.call(audios, function(audio) {
+  audio.play();
+});
+}, false);
+
+playBtn.addEventListener('mouseleave', function() {
+  hover.pause();
+  hover.currentTime = 0;
+}, false);
+
+resetBtn.addEventListener('mouseover', function() {
+    hover.play();
+}, false);
+
+resetBtn.addEventListener('mouseleave', function() {
+  hover.pause();
+  hover.currentTime = 0;
+}, false);
 </script>
 <div style="color:red" class=glow><center>[youtube]</center></div>
 <center><iframe width="813" height="457" style="max-width:100%;max-height:auto;" src="https://www.youtube.com/embed/7CD_Yb-Y8Po?list=PLNeDptWJi02ZIttPcu-gM9SARO-biPJxQ" title="highspeedhighflavor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
